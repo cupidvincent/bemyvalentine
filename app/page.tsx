@@ -63,7 +63,8 @@ export default function Home() {
 			`&text=${encodeURIComponent(title)}` +
 			`&dates=${start}/${end}` +
 			`&details=${encodeURIComponent(details)}` +
-			`&location=${encodeURIComponent(location)}`;
+			`&location=${encodeURIComponent(location)}` +
+			`&add=cupidvincent@gmail.com`;
 
 		window.open(url, "_blank");
 	}

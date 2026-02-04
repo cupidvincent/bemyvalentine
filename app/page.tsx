@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
 	const [step, setStep] = useState(0);
-	const [hearts, setHearts] = useState([]);
+	const [hearts, setHearts]: any = useState([]);
 	const [noPosition, setNoPosition] = useState({ top: "50%", left: "50%" });
 
 	// Heart animation
 	useEffect(() => {
 		const interval = setInterval(() => {
 			const id = Math.random().toString(36).substr(2, 9);
-			setHearts((prev) => [
+			setHearts((prev: any) => [
 				...prev,
 				{
 					id,
@@ -21,7 +21,7 @@ export default function Home() {
 				},
 			]);
 			setTimeout(() => {
-				setHearts((prev) => prev.filter((h) => h.id !== id));
+				setHearts((prev: any) => prev.filter((h: any) => h.id !== id));
 			}, 10000);
 		}, 500);
 		return () => clearInterval(interval);

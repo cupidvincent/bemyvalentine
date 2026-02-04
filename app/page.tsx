@@ -37,7 +37,7 @@ export default function Home() {
 	return (
 		<div className="relative min-h-screen bg-pink-100 flex flex-col items-center justify-center overflow-hidden p-4">
 			{/* Hearts */}
-			{hearts.map((heart) => (
+			{hearts.map((heart: any) => (
 				<div
 					key={heart.id}
 					className="absolute text-pink-500 animate-heart"
